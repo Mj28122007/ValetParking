@@ -31,7 +31,7 @@ function uploadBackground() {
 
 function uploadgreencar() {
 	//Define function ‘uploadgreencar’.
-	ctx.drawImage(greencar_imgTag, 0, 0, greencar_width, greencar_height);
+	ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar_width, greencar_height);
 
 	
 }
@@ -96,7 +96,7 @@ function left()
 {
 	//Define function to move the car left side
 	if(greencar_x>=0){
-		greencar_x = greencar_x + 10;
+		greencar_x = greencar_x - 10;
 		console.log("When left arrrow key is pressed, X = " + greencar_x + "| y = " + greencar_y);
 		uploadBackground();
 		uploadgreencar();
@@ -107,7 +107,7 @@ function right()
 {
 	//Define function to move the car right side
 	if(greencar_x<=750){
-		greencar_x = greencar_x - 10;
+		greencar_x = greencar_x + 10;
 		console.log("When up arrrow key is pressed, X = " + greencar_x + "| y = " + greencar_y);
 		uploadBackground();
 		uploadgreencar();
